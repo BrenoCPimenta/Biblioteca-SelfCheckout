@@ -47,7 +47,7 @@ make clean
 * As bibliotecas importadas se encontram na pasta third-party.
 
 ---
-**Obs: Esse projeto foi desenvolvido em equipe, dentro do próprio GitHub, mas em um repositório privado, as informações de desenvolvimento deste repositório são apenas para a sua cópia."
+**Obs: Esse projeto foi desenvolvido em equipe, dentro do próprio GitHub, mas em um repositório privado, as informações de desenvolvimento deste repositório são apenas para a sua cópia.**
 
 #### Integrantes:
 * Breno Pimenta
