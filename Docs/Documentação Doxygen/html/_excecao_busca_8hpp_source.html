@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema para Bibliotecas: Código-Fonte de include/excecoes/ExcecaoBusca.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema para Bibliotecas
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Breno Pimenta, Eduardo Paraíso, Gustavo Santos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f24c4cb7176df6ce21ef8bb6a728156f.html">excecoes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ExcecaoBusca.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_excecao_busca_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef EXCECAO_BUSCA_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define EXCECAO_BUSCA_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_excecao_livros_nao_listados.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_excecao_livros_nao_listados.html">ExcecaoLivrosNaoListados</a> : <span class="keyword">public</span> std::exception{</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_excecao_livros_nao_listados.html#aac03d8330a17f90a43182d03022150f6">what</a>() <span class="keyword">const</span> <span class="keywordflow">throw</span>();</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_excecao_abertura_de_arquivo_livros.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_excecao_abertura_de_arquivo_livros.html">ExcecaoAberturaDeArquivoLivros</a> : <span class="keyword">public</span> std::exception{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_excecao_abertura_de_arquivo_livros.html#a6d812778b17230248a7a5800489ac74d">what</a>() <span class="keyword">const</span> <span class="keywordflow">throw</span>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_excecao_fechamento_de_arquivo_livros.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_excecao_fechamento_de_arquivo_livros.html">ExcecaoFechamentoDeArquivoLivros</a> : <span class="keyword">public</span> std::exception{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_excecao_fechamento_de_arquivo_livros.html#aec1ab680e15d915fa3298621a4fe2604">what</a>() <span class="keyword">const</span> <span class="keywordflow">throw</span>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_excecao_leitura_de_arquivo_livros.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_excecao_leitura_de_arquivo_livros.html">ExcecaoLeituraDeArquivoLivros</a> : <span class="keyword">public</span> std::exception{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_excecao_leitura_de_arquivo_livros.html#a6238ba03419f6773ae91c0a4696cd0b3">what</a>() <span class="keyword">const</span> <span class="keywordflow">throw</span>();</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_excecao_abertura_de_arquivo_livros_html_a6d812778b17230248a7a5800489ac74d"><div class="ttname"><a href="class_excecao_abertura_de_arquivo_livros.html#a6d812778b17230248a7a5800489ac74d">ExcecaoAberturaDeArquivoLivros::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition:</b> ExcecaoBusca.cpp:7</div></div>
+<div class="ttc" id="class_excecao_livros_nao_listados_html"><div class="ttname"><a href="class_excecao_livros_nao_listados.html">ExcecaoLivrosNaoListados</a></div><div class="ttdoc">ExcecaoLivrosNaoListados retorna erro caso o usuário busque por um livro que não esteja cadastrado no...</div><div class="ttdef"><b>Definition:</b> ExcecaoBusca.hpp:8</div></div>
+<div class="ttc" id="class_excecao_leitura_de_arquivo_livros_html"><div class="ttname"><a href="class_excecao_leitura_de_arquivo_livros.html">ExcecaoLeituraDeArquivoLivros</a></div><div class="ttdoc">ExcecaoLeituraDeArquivoLivros retorna erro casso ocorra erro na leitura do arquivo de listagem de liv...</div><div class="ttdef"><b>Definition:</b> ExcecaoBusca.hpp:35</div></div>
+<div class="ttc" id="class_excecao_fechamento_de_arquivo_livros_html"><div class="ttname"><a href="class_excecao_fechamento_de_arquivo_livros.html">ExcecaoFechamentoDeArquivoLivros</a></div><div class="ttdoc">ExcecaoFechamentoDeArquivoLivros retorna erro caso ocorrra algum problema no fechamento da lista de l...</div><div class="ttdef"><b>Definition:</b> ExcecaoBusca.hpp:26</div></div>
+<div class="ttc" id="class_excecao_fechamento_de_arquivo_livros_html_aec1ab680e15d915fa3298621a4fe2604"><div class="ttname"><a href="class_excecao_fechamento_de_arquivo_livros.html#aec1ab680e15d915fa3298621a4fe2604">ExcecaoFechamentoDeArquivoLivros::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition:</b> ExcecaoBusca.cpp:11</div></div>
+<div class="ttc" id="class_excecao_leitura_de_arquivo_livros_html_a6238ba03419f6773ae91c0a4696cd0b3"><div class="ttname"><a href="class_excecao_leitura_de_arquivo_livros.html#a6238ba03419f6773ae91c0a4696cd0b3">ExcecaoLeituraDeArquivoLivros::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition:</b> ExcecaoBusca.cpp:15</div></div>
+<div class="ttc" id="class_excecao_livros_nao_listados_html_aac03d8330a17f90a43182d03022150f6"><div class="ttname"><a href="class_excecao_livros_nao_listados.html#aac03d8330a17f90a43182d03022150f6">ExcecaoLivrosNaoListados::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition:</b> ExcecaoBusca.cpp:3</div></div>
+<div class="ttc" id="class_excecao_abertura_de_arquivo_livros_html"><div class="ttname"><a href="class_excecao_abertura_de_arquivo_livros.html">ExcecaoAberturaDeArquivoLivros</a></div><div class="ttdoc">ExcecaoAberturaDeArquivoLivros retorna erro caso ocorra algum problema na listagem de livros.</div><div class="ttdef"><b>Definition:</b> ExcecaoBusca.hpp:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

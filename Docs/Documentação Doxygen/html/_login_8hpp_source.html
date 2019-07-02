@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema para Bibliotecas: Código-Fonte de include/login/Login.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema para Bibliotecas
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Breno Pimenta, Eduardo Paraíso, Gustavo Santos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ee6a6fb6341b235c42526a1123232ed0.html">login</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Login.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_login_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LOGIN_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LOGIN_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_login.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_login.html">Login</a>{</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        std::string senhaArquivo;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        std::string usuarioArquivo;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_login.html#ac137611f79410d16529d333fe503c8ec">   16</a></span>&#160;        std::string <a class="code" href="class_login.html#ac137611f79410d16529d333fe503c8ec">usuarioTentativa</a>;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_login.html#aa6bfcf95af6481918200dc7734137b49">   17</a></span>&#160;        std::string <a class="code" href="class_login.html#aa6bfcf95af6481918200dc7734137b49">senhaTentativa</a>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::string <a class="code" href="class_login.html#a11eac0940c4da0dd18e7d5ae5399046b">getCpf</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_login.html#a5387a5c79ce5cd17e7d3fd85fb12b83a">autenticacao</a>();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif </span></div><div class="ttc" id="class_login_html_ac137611f79410d16529d333fe503c8ec"><div class="ttname"><a href="class_login.html#ac137611f79410d16529d333fe503c8ec">Login::usuarioTentativa</a></div><div class="ttdeci">std::string usuarioTentativa</div><div class="ttdef"><b>Definition:</b> Login.hpp:16</div></div>
+<div class="ttc" id="class_login_html_a5387a5c79ce5cd17e7d3fd85fb12b83a"><div class="ttname"><a href="class_login.html#a5387a5c79ce5cd17e7d3fd85fb12b83a">Login::autenticacao</a></div><div class="ttdeci">bool autenticacao()</div><div class="ttdef"><b>Definition:</b> Login.cpp:7</div></div>
+<div class="ttc" id="class_login_html_aa6bfcf95af6481918200dc7734137b49"><div class="ttname"><a href="class_login.html#aa6bfcf95af6481918200dc7734137b49">Login::senhaTentativa</a></div><div class="ttdeci">std::string senhaTentativa</div><div class="ttdef"><b>Definition:</b> Login.hpp:17</div></div>
+<div class="ttc" id="class_login_html"><div class="ttname"><a href="class_login.html">Login</a></div><div class="ttdoc">Classe Login, compara a linha referente a senha no arquivo de autenticação e a senha digitada pelo us...</div><div class="ttdef"><b>Definition:</b> Login.hpp:10</div></div>
+<div class="ttc" id="class_login_html_a11eac0940c4da0dd18e7d5ae5399046b"><div class="ttname"><a href="class_login.html#a11eac0940c4da0dd18e7d5ae5399046b">Login::getCpf</a></div><div class="ttdeci">std::string getCpf()</div><div class="ttdef"><b>Definition:</b> Login.cpp:37</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

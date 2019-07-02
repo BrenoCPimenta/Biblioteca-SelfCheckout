@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema para Bibliotecas: Código-Fonte de include/gestao/Usuario.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema para Bibliotecas
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Breno Pimenta, Eduardo Paraíso, Gustavo Santos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d3568e99b389f886c88bcd0044df10a1.html">gestao</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Usuario.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_usuario_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef USUARIO_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define USUARIO_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_pessoa_8hpp.html">Pessoa.hpp</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../excecoes/ExcecaoManipulacaoLivros.hpp&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_usuario.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_usuario.html">Usuario</a> : <span class="keyword">public</span> <a class="code" href="class_pessoa.html">Pessoa</a>{</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::vector&lt;std::string&gt; _livros;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        </div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_usuario.html#a1e70539cfa5991cd711aa808bf22426d">Usuario</a>(std::string);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        </div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_usuario.html#a31278ae35c22cfd776023ac61fd7b936">verificarSeHaLivrosEmprestado</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_usuario.html#a4924ca45ad5dfc728a1b42b5d796f276">verificarLivroEspecifico</a>(std::string) <span class="keyword">override</span>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_usuario.html#a4466655ca0f573b8e46b2d62d16acb48">pegarLivroEmprestado</a>(std::string) <span class="keyword">override</span>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_usuario.html#ad1fe8d76ca93b5505e72b1b6d50acca5">devolverLivro</a>(std::string) <span class="keyword">override</span>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_usuario.html#ae654f1ccecd9db7278b891f72c13c025">printLivrosEmprestados</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::vector&lt;std::string&gt;  <a class="code" href="class_usuario.html#ace50554a36f9deb7387bb2146295dedb">getLivros</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};      </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_usuario_html_a4924ca45ad5dfc728a1b42b5d796f276"><div class="ttname"><a href="class_usuario.html#a4924ca45ad5dfc728a1b42b5d796f276">Usuario::verificarLivroEspecifico</a></div><div class="ttdeci">bool verificarLivroEspecifico(std::string) override</div><div class="ttdef"><b>Definition:</b> Usuario.cpp:33</div></div>
+<div class="ttc" id="class_usuario_html_a1e70539cfa5991cd711aa808bf22426d"><div class="ttname"><a href="class_usuario.html#a1e70539cfa5991cd711aa808bf22426d">Usuario::Usuario</a></div><div class="ttdeci">Usuario(std::string)</div><div class="ttdef"><b>Definition:</b> Usuario.cpp:3</div></div>
+<div class="ttc" id="class_usuario_html_a31278ae35c22cfd776023ac61fd7b936"><div class="ttname"><a href="class_usuario.html#a31278ae35c22cfd776023ac61fd7b936">Usuario::verificarSeHaLivrosEmprestado</a></div><div class="ttdeci">bool verificarSeHaLivrosEmprestado() override</div><div class="ttdef"><b>Definition:</b> Usuario.cpp:5</div></div>
+<div class="ttc" id="class_usuario_html_ad1fe8d76ca93b5505e72b1b6d50acca5"><div class="ttname"><a href="class_usuario.html#ad1fe8d76ca93b5505e72b1b6d50acca5">Usuario::devolverLivro</a></div><div class="ttdeci">bool devolverLivro(std::string) override</div><div class="ttdef"><b>Definition:</b> Usuario.cpp:93</div></div>
+<div class="ttc" id="_pessoa_8hpp_html"><div class="ttname"><a href="_pessoa_8hpp.html">Pessoa.hpp</a></div></div>
+<div class="ttc" id="class_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition:</b> Usuario.hpp:8</div></div>
+<div class="ttc" id="class_pessoa_html"><div class="ttname"><a href="class_pessoa.html">Pessoa</a></div><div class="ttdoc">A classe Pessoa é uma classe abstrata.</div><div class="ttdef"><b>Definition:</b> Pessoa.hpp:13</div></div>
+<div class="ttc" id="class_usuario_html_a4466655ca0f573b8e46b2d62d16acb48"><div class="ttname"><a href="class_usuario.html#a4466655ca0f573b8e46b2d62d16acb48">Usuario::pegarLivroEmprestado</a></div><div class="ttdeci">bool pegarLivroEmprestado(std::string) override</div><div class="ttdef"><b>Definition:</b> Usuario.cpp:53</div></div>
+<div class="ttc" id="class_usuario_html_ae654f1ccecd9db7278b891f72c13c025"><div class="ttname"><a href="class_usuario.html#ae654f1ccecd9db7278b891f72c13c025">Usuario::printLivrosEmprestados</a></div><div class="ttdeci">bool printLivrosEmprestados() override</div><div class="ttdef"><b>Definition:</b> Usuario.cpp:125</div></div>
+<div class="ttc" id="class_usuario_html_ace50554a36f9deb7387bb2146295dedb"><div class="ttname"><a href="class_usuario.html#ace50554a36f9deb7387bb2146295dedb">Usuario::getLivros</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getLivros() override</div><div class="ttdef"><b>Definition:</b> Usuario.cpp:157</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
