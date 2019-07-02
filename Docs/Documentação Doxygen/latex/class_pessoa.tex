@@ -1,0 +1,264 @@
+\hypertarget{class_pessoa}{}\section{Referência da Classe Pessoa}
+\label{class_pessoa}\index{Pessoa@{Pessoa}}
+
+
+A classe \mbox{\hyperlink{class_pessoa}{Pessoa}} é uma classe abstrata.  
+
+
+
+
+{\ttfamily \#include $<$Pessoa.\+hpp$>$}
+
+Diagrama de hierarquia para Pessoa\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pessoa}
+\end{center}
+\end{figure}
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pessoa_a53285703ed58f6b634eb75da443cd1d6}{Pessoa}} (std\+::string cpf)
+\item 
+virtual \mbox{\hyperlink{class_pessoa_a1501b01d184497075fe5ce042da3ae44}{$\sim$\+Pessoa}} ()
+\item 
+bool \mbox{\hyperlink{class_pessoa_ac04dffcb5114b117daf83061f8349f5d}{buscar\+Dados}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a5f4f2063d62eaea38673da5fd5283465}{get\+Nome}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_pessoa_aac57d87193996bbe7420804f9ac298fb}{get\+Cpf}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a2194fadbbd94e5220e29b4a12531f26c}{get\+Endereco}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a909e765b8fa0cfa405211a9ac9a985c1}{get\+Contato}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_pessoa_a547989725eea2157a721541846091929}{verificar\+Se\+Ha\+Livros\+Emprestado}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_pessoa_aca2ded64e7520692148ee84d923c5c28}{pegar\+Livro\+Emprestado}} (std\+::string)=0
+\item 
+virtual bool \mbox{\hyperlink{class_pessoa_a92f80c6215d5c79ce1e2915df3a34a5b}{devolver\+Livro}} (std\+::string)=0
+\item 
+virtual bool \mbox{\hyperlink{class_pessoa_acf173c004fed24a7ab087951b3e35814}{print\+Livros\+Emprestados}} ()=0
+\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_pessoa_a9f6907ce8a5ef6fc942f0fa0d1f27854}{get\+Livros}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_pessoa_ad405167e003a8b8960176b45ae70803c}{verificar\+Livro\+Especifico}} (std\+::string)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+A classe \mbox{\hyperlink{class_pessoa}{Pessoa}} é uma classe abstrata. 
+
+\subsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_pessoa_a53285703ed58f6b634eb75da443cd1d6}\label{class_pessoa_a53285703ed58f6b634eb75da443cd1d6}} 
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{Pessoa()}{Pessoa()}}
+{\footnotesize\ttfamily Pessoa\+::\+Pessoa (\begin{DoxyParamCaption}\item[{std\+::string}]{cpf }\end{DoxyParamCaption})}
+
+Construtor simples. 
+\begin{DoxyParams}{Parâmetros}
+{\em recebe} & o cpf e setar o atributo da classe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+@\+Pessoa 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_pessoa_a1501b01d184497075fe5ce042da3ae44}\label{class_pessoa_a1501b01d184497075fe5ce042da3ae44}} 
+\index{Pessoa@{Pessoa}!````~Pessoa@{$\sim$Pessoa}}
+\index{````~Pessoa@{$\sim$Pessoa}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{$\sim$Pessoa()}{~Pessoa()}}
+{\footnotesize\ttfamily Pessoa\+::$\sim$\+Pessoa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+O destrutor deve ser virtual uma vez que a classe é abstrata e haverá substituição de Liskov em \mbox{\hyperlink{class_usuario}{Usuario}}. 
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{class_pessoa_ac04dffcb5114b117daf83061f8349f5d}\label{class_pessoa_ac04dffcb5114b117daf83061f8349f5d}} 
+\index{Pessoa@{Pessoa}!buscarDados@{buscarDados}}
+\index{buscarDados@{buscarDados}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{buscarDados()}{buscarDados()}}
+{\footnotesize\ttfamily bool Pessoa\+::buscar\+Dados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Seta todos os atributos com as informações contidas em arquivo. O tipo booleano é para que fosse possivel atender aos testes. 
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & \\
+\hline
+{\em cpf} & \\
+\hline
+{\em endereço} & \\
+\hline
+{\em contato} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com a abertura do seu registro\textbackslash{}n\+Por favor contactar o suporte\char`\"{} \\
+\hline
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com o conteudo do seu registro\textbackslash{}n\+Por favor contactar o suporte\char`\"{} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_pessoa_a92f80c6215d5c79ce1e2915df3a34a5b}\label{class_pessoa_a92f80c6215d5c79ce1e2915df3a34a5b}} 
+\index{Pessoa@{Pessoa}!devolverLivro@{devolverLivro}}
+\index{devolverLivro@{devolverLivro}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{devolverLivro()}{devolverLivro()}}
+{\footnotesize\ttfamily virtual bool Pessoa\+::devolver\+Livro (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método Virtual Puro 
+\begin{DoxyParams}{Parâmetros}
+{\em Possui} & uma string como parametro, no caso, o nome do livro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true caso consigo devolver um livro e falso caso contrário. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_usuario_ad1fe8d76ca93b5505e72b1b6d50acca5}{Usuario}}.
+
+\mbox{\Hypertarget{class_pessoa_a909e765b8fa0cfa405211a9ac9a985c1}\label{class_pessoa_a909e765b8fa0cfa405211a9ac9a985c1}} 
+\index{Pessoa@{Pessoa}!getContato@{getContato}}
+\index{getContato@{getContato}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{getContato()}{getContato()}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::get\+Contato (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Seta o atributo contato atraves das informções contidas em arquivo. 
+\begin{DoxyParams}{Parâmetros}
+{\em contato} & no arquivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+retorna o contato no atributo privado \+\_\+contato. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pessoa_aac57d87193996bbe7420804f9ac298fb}\label{class_pessoa_aac57d87193996bbe7420804f9ac298fb}} 
+\index{Pessoa@{Pessoa}!getCpf@{getCpf}}
+\index{getCpf@{getCpf}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{getCpf()}{getCpf()}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::get\+Cpf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Seta o atributo cpf atraves das informções contidas em arquivo. 
+\begin{DoxyParams}{Parâmetros}
+{\em cpf} & no arquivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+retorna o cpf no atributo privado \+\_\+cpf. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pessoa_a2194fadbbd94e5220e29b4a12531f26c}\label{class_pessoa_a2194fadbbd94e5220e29b4a12531f26c}} 
+\index{Pessoa@{Pessoa}!getEndereco@{getEndereco}}
+\index{getEndereco@{getEndereco}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{getEndereco()}{getEndereco()}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::get\+Endereco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Seta o atributo endereço atraves das informções contidas em arquivo. 
+\begin{DoxyParams}{Parâmetros}
+{\em endereço} & no arquivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+retorna o endereço no atributo privado \+\_\+endereco. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pessoa_a9f6907ce8a5ef6fc942f0fa0d1f27854}\label{class_pessoa_a9f6907ce8a5ef6fc942f0fa0d1f27854}} 
+\index{Pessoa@{Pessoa}!getLivros@{getLivros}}
+\index{getLivros@{getLivros}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{getLivros()}{getLivros()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Pessoa\+::get\+Livros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Retorna}
+um vetor de string que ordena e enumera os livros emprestados para passagem de parametros em outro métodos descritos anteriormente. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_usuario_ace50554a36f9deb7387bb2146295dedb}{Usuario}}.
+
+\mbox{\Hypertarget{class_pessoa_a5f4f2063d62eaea38673da5fd5283465}\label{class_pessoa_a5f4f2063d62eaea38673da5fd5283465}} 
+\index{Pessoa@{Pessoa}!getNome@{getNome}}
+\index{getNome@{getNome}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Seta o atributo nome atraves das informções contidas em arquivo. 
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & no arquivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+retorna o nome no atributo privado \+\_\+nome. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pessoa_aca2ded64e7520692148ee84d923c5c28}\label{class_pessoa_aca2ded64e7520692148ee84d923c5c28}} 
+\index{Pessoa@{Pessoa}!pegarLivroEmprestado@{pegarLivroEmprestado}}
+\index{pegarLivroEmprestado@{pegarLivroEmprestado}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{pegarLivroEmprestado()}{pegarLivroEmprestado()}}
+{\footnotesize\ttfamily virtual bool Pessoa\+::pegar\+Livro\+Emprestado (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método Virtual Puro 
+\begin{DoxyParams}{Parâmetros}
+{\em Possui} & uma string como parametro, no caso, o nome do livro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true caso consigo colocar emprestar um livro e falso caso contrário. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_usuario_a4466655ca0f573b8e46b2d62d16acb48}{Usuario}}.
+
+\mbox{\Hypertarget{class_pessoa_acf173c004fed24a7ab087951b3e35814}\label{class_pessoa_acf173c004fed24a7ab087951b3e35814}} 
+\index{Pessoa@{Pessoa}!printLivrosEmprestados@{printLivrosEmprestados}}
+\index{printLivrosEmprestados@{printLivrosEmprestados}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{printLivrosEmprestados()}{printLivrosEmprestados()}}
+{\footnotesize\ttfamily virtual bool Pessoa\+::print\+Livros\+Emprestados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método Virtual Puro \begin{DoxyReturn}{Retorna}
+Retorna na tela todos os livros em posse do usuário, caso o usuario deseje devolver algum livro, este livro será passado como parametro no metodo devolver\+Livro. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_usuario_ae654f1ccecd9db7278b891f72c13c025}{Usuario}}.
+
+\mbox{\Hypertarget{class_pessoa_ad405167e003a8b8960176b45ae70803c}\label{class_pessoa_ad405167e003a8b8960176b45ae70803c}} 
+\index{Pessoa@{Pessoa}!verificarLivroEspecifico@{verificarLivroEspecifico}}
+\index{verificarLivroEspecifico@{verificarLivroEspecifico}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{verificarLivroEspecifico()}{verificarLivroEspecifico()}}
+{\footnotesize\ttfamily virtual bool Pessoa\+::verificar\+Livro\+Especifico (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método Virtual Puro 
+\begin{DoxyParams}{Parâmetros}
+{\em Possui} & uma string como parametro, no caso, o nome do livro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true caso o livro passado esteja emprestado para a pessoa que chamou o metodo e falso caso contrario. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_usuario_a4924ca45ad5dfc728a1b42b5d796f276}{Usuario}}.
+
+\mbox{\Hypertarget{class_pessoa_a547989725eea2157a721541846091929}\label{class_pessoa_a547989725eea2157a721541846091929}} 
+\index{Pessoa@{Pessoa}!verificarSeHaLivrosEmprestado@{verificarSeHaLivrosEmprestado}}
+\index{verificarSeHaLivrosEmprestado@{verificarSeHaLivrosEmprestado}!Pessoa@{Pessoa}}
+\subsubsection{\texorpdfstring{verificarSeHaLivrosEmprestado()}{verificarSeHaLivrosEmprestado()}}
+{\footnotesize\ttfamily virtual bool Pessoa\+::verificar\+Se\+Ha\+Livros\+Emprestado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método Virtual Puro 
+\begin{DoxyParams}{Parâmetros}
+{\em cpf} & do usuario e verifica se o mesmo possui algum emprestimo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se existir emprestimo e false caso negativo 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_usuario_a31278ae35c22cfd776023ac61fd7b936}{Usuario}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/gestao/\mbox{\hyperlink{_pessoa_8hpp}{Pessoa.\+hpp}}\item 
+src/gestao/\mbox{\hyperlink{_pessoa_8cpp}{Pessoa.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,45 @@
+\hypertarget{class_excecao_livros_nao_listados}{}\section{Referência da Classe Excecao\+Livros\+Nao\+Listados}
+\label{class_excecao_livros_nao_listados}\index{ExcecaoLivrosNaoListados@{ExcecaoLivrosNaoListados}}
+
+
+\mbox{\hyperlink{class_excecao_livros_nao_listados}{Excecao\+Livros\+Nao\+Listados}} retorna erro caso o usuário busque por um livro que não esteja cadastrado no acervo.  
+
+
+
+
+{\ttfamily \#include $<$Excecao\+Busca.\+hpp$>$}
+
+Diagrama de hierarquia para Excecao\+Livros\+Nao\+Listados\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_excecao_livros_nao_listados}
+\end{center}
+\end{figure}
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_excecao_livros_nao_listados_aac03d8330a17f90a43182d03022150f6}{what}} () const  throw ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+\mbox{\hyperlink{class_excecao_livros_nao_listados}{Excecao\+Livros\+Nao\+Listados}} retorna erro caso o usuário busque por um livro que não esteja cadastrado no acervo. 
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{class_excecao_livros_nao_listados_aac03d8330a17f90a43182d03022150f6}\label{class_excecao_livros_nao_listados_aac03d8330a17f90a43182d03022150f6}} 
+\index{ExcecaoLivrosNaoListados@{ExcecaoLivrosNaoListados}!what@{what}}
+\index{what@{what}!ExcecaoLivrosNaoListados@{ExcecaoLivrosNaoListados}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char $\ast$ Excecao\+Livros\+Nao\+Listados\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Nao ha livros catalogados na biblioteca ou houve um erro na inclusao dos livros a partir do arquivo. Por favor contactar o suporte\char`\"{}. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/excecoes/\mbox{\hyperlink{_excecao_busca_8hpp}{Excecao\+Busca.\+hpp}}\item 
+src/excecoes/\mbox{\hyperlink{_excecao_busca_8cpp}{Excecao\+Busca.\+cpp}}\end{DoxyCompactItemize}

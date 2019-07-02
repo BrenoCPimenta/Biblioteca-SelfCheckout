@@ -1,0 +1,92 @@
+\hypertarget{class_login}{}\section{Referência da Classe Login}
+\label{class_login}\index{Login@{Login}}
+
+
+Classe \mbox{\hyperlink{class_login}{Login}}, compara a linha referente a senha no arquivo de autenticação e a senha digitada pelo usuário.  
+
+
+
+
+{\ttfamily \#include $<$Login.\+hpp$>$}
+
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_login_a11eac0940c4da0dd18e7d5ae5399046b}{get\+Cpf}} ()
+\item 
+bool \mbox{\hyperlink{class_login_a5387a5c79ce5cd17e7d3fd85fb12b83a}{autenticacao}} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_login_ac137611f79410d16529d333fe503c8ec}{usuario\+Tentativa}}
+\item 
+std\+::string \mbox{\hyperlink{class_login_aa6bfcf95af6481918200dc7734137b49}{senha\+Tentativa}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe \mbox{\hyperlink{class_login}{Login}}, compara a linha referente a senha no arquivo de autenticação e a senha digitada pelo usuário. 
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{class_login_a5387a5c79ce5cd17e7d3fd85fb12b83a}\label{class_login_a5387a5c79ce5cd17e7d3fd85fb12b83a}} 
+\index{Login@{Login}!autenticacao@{autenticacao}}
+\index{autenticacao@{autenticacao}!Login@{Login}}
+\subsubsection{\texorpdfstring{autenticacao()}{autenticacao()}}
+{\footnotesize\ttfamily bool Login\+::autenticacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compara a senha cadastrada, presente no arquivo autenticação, com a senha inserida pelo usuário. 
+\begin{DoxyParams}{Parâmetros}
+{\em senha\+Arquivo,armazena} & a informação contida no arquivo \\
+\hline
+{\em senha\+Tentativa,é} & a senha inserida pelo usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se as senhas forem idênticas, false, se ao contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+A\+C\+E\+S\+S\+O N\+E\+G\+A\+D\+O Por favor confira se digitou a senha corretamente\char`\"{} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_login_a11eac0940c4da0dd18e7d5ae5399046b}\label{class_login_a11eac0940c4da0dd18e7d5ae5399046b}} 
+\index{Login@{Login}!getCpf@{getCpf}}
+\index{getCpf@{getCpf}!Login@{Login}}
+\subsubsection{\texorpdfstring{getCpf()}{getCpf()}}
+{\footnotesize\ttfamily std\+::string Login\+::get\+Cpf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em Pega} & o numero do cpf no arquivo de autenticação que serve como autenticador de usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+valor do cpf 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+A\+C\+E\+S\+S\+O N\+E\+G\+A\+D\+O\textbackslash{}n\+O usuario apresentado nao esta cadastrado\textbackslash{}n\+Por favor tente novamente ou cadastre um novo usuario\char`\"{} \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Atributos}
+\mbox{\Hypertarget{class_login_aa6bfcf95af6481918200dc7734137b49}\label{class_login_aa6bfcf95af6481918200dc7734137b49}} 
+\index{Login@{Login}!senhaTentativa@{senhaTentativa}}
+\index{senhaTentativa@{senhaTentativa}!Login@{Login}}
+\subsubsection{\texorpdfstring{senhaTentativa}{senhaTentativa}}
+{\footnotesize\ttfamily std\+::string Login\+::senha\+Tentativa}
+
+\mbox{\Hypertarget{class_login_ac137611f79410d16529d333fe503c8ec}\label{class_login_ac137611f79410d16529d333fe503c8ec}} 
+\index{Login@{Login}!usuarioTentativa@{usuarioTentativa}}
+\index{usuarioTentativa@{usuarioTentativa}!Login@{Login}}
+\subsubsection{\texorpdfstring{usuarioTentativa}{usuarioTentativa}}
+{\footnotesize\ttfamily std\+::string Login\+::usuario\+Tentativa}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/login/\mbox{\hyperlink{_login_8hpp}{Login.\+hpp}}\item 
+src/login/\mbox{\hyperlink{_login_8cpp}{Login.\+cpp}}\end{DoxyCompactItemize}

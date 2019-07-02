@@ -1,0 +1,145 @@
+\hypertarget{class_usuario}{}\section{Referência da Classe Usuario}
+\label{class_usuario}\index{Usuario@{Usuario}}
+
+
+{\ttfamily \#include $<$Usuario.\+hpp$>$}
+
+Diagrama de hierarquia para Usuario\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_usuario}
+\end{center}
+\end{figure}
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_usuario_a1e70539cfa5991cd711aa808bf22426d}{Usuario}} (std\+::string)
+\item 
+bool \mbox{\hyperlink{class_usuario_a31278ae35c22cfd776023ac61fd7b936}{verificar\+Se\+Ha\+Livros\+Emprestado}} () override
+\item 
+bool \mbox{\hyperlink{class_usuario_a4924ca45ad5dfc728a1b42b5d796f276}{verificar\+Livro\+Especifico}} (std\+::string) override
+\item 
+bool \mbox{\hyperlink{class_usuario_a4466655ca0f573b8e46b2d62d16acb48}{pegar\+Livro\+Emprestado}} (std\+::string) override
+\item 
+bool \mbox{\hyperlink{class_usuario_ad1fe8d76ca93b5505e72b1b6d50acca5}{devolver\+Livro}} (std\+::string) override
+\item 
+bool \mbox{\hyperlink{class_usuario_ae654f1ccecd9db7278b891f72c13c025}{print\+Livros\+Emprestados}} () override
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_usuario_ace50554a36f9deb7387bb2146295dedb}{get\+Livros}} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_usuario_a1e70539cfa5991cd711aa808bf22426d}\label{class_usuario_a1e70539cfa5991cd711aa808bf22426d}} 
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{Usuario()}{Usuario()}}
+{\footnotesize\ttfamily Usuario\+::\+Usuario (\begin{DoxyParamCaption}\item[{std\+::string}]{cpf }\end{DoxyParamCaption})}
+
+
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{class_usuario_ad1fe8d76ca93b5505e72b1b6d50acca5}\label{class_usuario_ad1fe8d76ca93b5505e72b1b6d50acca5}} 
+\index{Usuario@{Usuario}!devolverLivro@{devolverLivro}}
+\index{devolverLivro@{devolverLivro}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{devolverLivro()}{devolverLivro()}}
+{\footnotesize\ttfamily bool Usuario\+::devolver\+Livro (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Método Virtual Puro 
+\begin{DoxyParams}{Parâmetros}
+{\em Possui} & uma string como parametro, no caso, o nome do livro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true caso consigo devolver um livro e falso caso contrário. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_pessoa_a92f80c6215d5c79ce1e2915df3a34a5b}{Pessoa}}.
+
+\mbox{\Hypertarget{class_usuario_ace50554a36f9deb7387bb2146295dedb}\label{class_usuario_ace50554a36f9deb7387bb2146295dedb}} 
+\index{Usuario@{Usuario}!getLivros@{getLivros}}
+\index{getLivros@{getLivros}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{getLivros()}{getLivros()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Usuario\+::get\+Livros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Retorna}
+um vetor de string que ordena e enumera os livros emprestados para passagem de parametros em outro métodos descritos anteriormente. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_pessoa_a9f6907ce8a5ef6fc942f0fa0d1f27854}{Pessoa}}.
+
+\mbox{\Hypertarget{class_usuario_a4466655ca0f573b8e46b2d62d16acb48}\label{class_usuario_a4466655ca0f573b8e46b2d62d16acb48}} 
+\index{Usuario@{Usuario}!pegarLivroEmprestado@{pegarLivroEmprestado}}
+\index{pegarLivroEmprestado@{pegarLivroEmprestado}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{pegarLivroEmprestado()}{pegarLivroEmprestado()}}
+{\footnotesize\ttfamily bool Usuario\+::pegar\+Livro\+Emprestado (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Método Virtual Puro 
+\begin{DoxyParams}{Parâmetros}
+{\em Possui} & uma string como parametro, no caso, o nome do livro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true caso consigo colocar emprestar um livro e falso caso contrário. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_pessoa_aca2ded64e7520692148ee84d923c5c28}{Pessoa}}.
+
+\mbox{\Hypertarget{class_usuario_ae654f1ccecd9db7278b891f72c13c025}\label{class_usuario_ae654f1ccecd9db7278b891f72c13c025}} 
+\index{Usuario@{Usuario}!printLivrosEmprestados@{printLivrosEmprestados}}
+\index{printLivrosEmprestados@{printLivrosEmprestados}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{printLivrosEmprestados()}{printLivrosEmprestados()}}
+{\footnotesize\ttfamily bool Usuario\+::print\+Livros\+Emprestados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Método Virtual Puro \begin{DoxyReturn}{Retorna}
+Retorna na tela todos os livros em posse do usuário, caso o usuario deseje devolver algum livro, este livro será passado como parametro no metodo devolver\+Livro. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_pessoa_acf173c004fed24a7ab087951b3e35814}{Pessoa}}.
+
+\mbox{\Hypertarget{class_usuario_a4924ca45ad5dfc728a1b42b5d796f276}\label{class_usuario_a4924ca45ad5dfc728a1b42b5d796f276}} 
+\index{Usuario@{Usuario}!verificarLivroEspecifico@{verificarLivroEspecifico}}
+\index{verificarLivroEspecifico@{verificarLivroEspecifico}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{verificarLivroEspecifico()}{verificarLivroEspecifico()}}
+{\footnotesize\ttfamily bool Usuario\+::verificar\+Livro\+Especifico (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Método Virtual Puro 
+\begin{DoxyParams}{Parâmetros}
+{\em Possui} & uma string como parametro, no caso, o nome do livro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true caso o livro passado esteja emprestado para a pessoa que chamou o metodo e falso caso contrario. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_pessoa_ad405167e003a8b8960176b45ae70803c}{Pessoa}}.
+
+\mbox{\Hypertarget{class_usuario_a31278ae35c22cfd776023ac61fd7b936}\label{class_usuario_a31278ae35c22cfd776023ac61fd7b936}} 
+\index{Usuario@{Usuario}!verificarSeHaLivrosEmprestado@{verificarSeHaLivrosEmprestado}}
+\index{verificarSeHaLivrosEmprestado@{verificarSeHaLivrosEmprestado}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{verificarSeHaLivrosEmprestado()}{verificarSeHaLivrosEmprestado()}}
+{\footnotesize\ttfamily bool Usuario\+::verificar\+Se\+Ha\+Livros\+Emprestado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Método Virtual Puro 
+\begin{DoxyParams}{Parâmetros}
+{\em cpf} & do usuario e verifica se o mesmo possui algum emprestimo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se existir emprestimo e false caso negativo 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_pessoa_a547989725eea2157a721541846091929}{Pessoa}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/gestao/\mbox{\hyperlink{_usuario_8hpp}{Usuario.\+hpp}}\item 
+src/gestao/\mbox{\hyperlink{_usuario_8cpp}{Usuario.\+cpp}}\end{DoxyCompactItemize}

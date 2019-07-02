@@ -1,0 +1,88 @@
+\hypertarget{class_senha}{}\section{Referência da Classe Senha}
+\label{class_senha}\index{Senha@{Senha}}
+
+
+Classe \mbox{\hyperlink{class_senha}{Senha}} é responsável pela dupla comparação das senhas no momento do cadastramento.  
+
+
+
+
+{\ttfamily \#include $<$Senha.\+hpp$>$}
+
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_senha_a28bad3d6b586b1134d4c35326b0bb822}{set\+Senha}} ()
+\item 
+void \mbox{\hyperlink{class_senha_aaa2e8613c086898a6dcb6ae746f11b20}{set\+Contra\+Senha}} ()
+\item 
+bool \mbox{\hyperlink{class_senha_a942494d99f59fd34396763398dbca468}{compara\+Senha}} ()
+\item 
+bool \mbox{\hyperlink{class_senha_a497007300e0cfba3abb6daecfeeaaab4}{cadastra\+Senha}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe \mbox{\hyperlink{class_senha}{Senha}} é responsável pela dupla comparação das senhas no momento do cadastramento. 
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{class_senha_a497007300e0cfba3abb6daecfeeaaab4}\label{class_senha_a497007300e0cfba3abb6daecfeeaaab4}} 
+\index{Senha@{Senha}!cadastraSenha@{cadastraSenha}}
+\index{cadastraSenha@{cadastraSenha}!Senha@{Senha}}
+\subsubsection{\texorpdfstring{cadastraSenha()}{cadastraSenha()}}
+{\footnotesize\ttfamily bool Senha\+::cadastra\+Senha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em resultado} & do método \mbox{\hyperlink{class_senha_a942494d99f59fd34396763398dbca468}{compara\+Senha()}}. Em caso afirmativo, a senha é armazenada no arquivo autenticação. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_senha_a942494d99f59fd34396763398dbca468}\label{class_senha_a942494d99f59fd34396763398dbca468}} 
+\index{Senha@{Senha}!comparaSenha@{comparaSenha}}
+\index{comparaSenha@{comparaSenha}!Senha@{Senha}}
+\subsubsection{\texorpdfstring{comparaSenha()}{comparaSenha()}}
+{\footnotesize\ttfamily bool Senha\+::compara\+Senha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em senha} & inserida \\
+\hline
+{\em contra} & senha inserida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso a comparação seja idêntica e false em caso de divergências 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+As senhas não conferem\char`\"{} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_senha_aaa2e8613c086898a6dcb6ae746f11b20}\label{class_senha_aaa2e8613c086898a6dcb6ae746f11b20}} 
+\index{Senha@{Senha}!setContraSenha@{setContraSenha}}
+\index{setContraSenha@{setContraSenha}!Senha@{Senha}}
+\subsubsection{\texorpdfstring{setContraSenha()}{setContraSenha()}}
+{\footnotesize\ttfamily void Senha\+::set\+Contra\+Senha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em recebe} & novamente a informação inseria pleo usuário, utilizada para confirmação através de comparação. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_senha_a28bad3d6b586b1134d4c35326b0bb822}\label{class_senha_a28bad3d6b586b1134d4c35326b0bb822}} 
+\index{Senha@{Senha}!setSenha@{setSenha}}
+\index{setSenha@{setSenha}!Senha@{Senha}}
+\subsubsection{\texorpdfstring{setSenha()}{setSenha()}}
+{\footnotesize\ttfamily void Senha\+::set\+Senha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em recebe} & a informação inserida pelo usuário. \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/cadastro/\mbox{\hyperlink{_senha_8hpp}{Senha.\+hpp}}\item 
+src/cadastro/\mbox{\hyperlink{_senha_8cpp}{Senha.\+cpp}}\end{DoxyCompactItemize}

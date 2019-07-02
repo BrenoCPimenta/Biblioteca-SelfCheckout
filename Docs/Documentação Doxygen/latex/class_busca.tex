@@ -1,0 +1,93 @@
+\hypertarget{class_busca}{}\section{Referência da Classe Busca}
+\label{class_busca}\index{Busca@{Busca}}
+
+
+Classe \mbox{\hyperlink{class_busca}{Busca}} é responsável por buscar os exemplares de Livros Cadastrados em um arquivo de texto e retornar o resultado na tela.  
+
+
+
+
+{\ttfamily \#include $<$Busca.\+hpp$>$}
+
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_busca_a73eadfa945ab7fa2cf92e4b0c70590bf}{incluir\+Livros}} ()
+\item 
+void \mbox{\hyperlink{class_busca_a53ac6cf49f256643144485a8cce6a29b}{buscar\+Livro}} (std\+::string palavra\+\_\+chave)
+\item 
+void \mbox{\hyperlink{class_busca_aa04fd71e97f268b784256fa71daaaccb}{print\+Busca}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_busca_a5dfb95c0cc9de0a4490fbb56d6cc741f}{get\+Livros\+Busca}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe \mbox{\hyperlink{class_busca}{Busca}} é responsável por buscar os exemplares de Livros Cadastrados em um arquivo de texto e retornar o resultado na tela. 
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{class_busca_a53ac6cf49f256643144485a8cce6a29b}\label{class_busca_a53ac6cf49f256643144485a8cce6a29b}} 
+\index{Busca@{Busca}!buscarLivro@{buscarLivro}}
+\index{buscarLivro@{buscarLivro}!Busca@{Busca}}
+\subsubsection{\texorpdfstring{buscarLivro()}{buscarLivro()}}
+{\footnotesize\ttfamily void Busca\+::buscar\+Livro (\begin{DoxyParamCaption}\item[{std\+::string}]{palavra\+\_\+chave }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em recebe} & uma string contendo o nome do livro desejado e procura em uma lista do acervo. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Nao ha livros catalogados na biblioteca ou houve um erro na inclusao dos livros a partir do arquivo\textbackslash{}n\+Por favor contactar o suporte\char`\"{} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_busca_a5dfb95c0cc9de0a4490fbb56d6cc741f}\label{class_busca_a5dfb95c0cc9de0a4490fbb56d6cc741f}} 
+\index{Busca@{Busca}!getLivrosBusca@{getLivrosBusca}}
+\index{getLivrosBusca@{getLivrosBusca}!Busca@{Busca}}
+\subsubsection{\texorpdfstring{getLivrosBusca()}{getLivrosBusca()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Busca\+::get\+Livros\+Busca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_busca_a73eadfa945ab7fa2cf92e4b0c70590bf}\label{class_busca_a73eadfa945ab7fa2cf92e4b0c70590bf}} 
+\index{Busca@{Busca}!incluirLivros@{incluirLivros}}
+\index{incluirLivros@{incluirLivros}!Busca@{Busca}}
+\subsubsection{\texorpdfstring{incluirLivros()}{incluirLivros()}}
+{\footnotesize\ttfamily bool Busca\+::incluir\+Livros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em Faz} & a leitura de um arquivo de texto com o acervo de livros e o armazena em um vetor de strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso o armazenamento dos livros no vetor tenha ocorrido com exito. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com a abertura da listagem de livros\textbackslash{}n\+Por favor contactar o suporte\char`\"{} \\
+\hline
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com o fechamento da listagem de livros\textbackslash{}n\+Por favor contactar o suporte\char`\"{} \\
+\hline
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com a leitura da listagem de livros\textbackslash{}n\+Por favor contactar o suporte\char`\"{} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_busca_aa04fd71e97f268b784256fa71daaaccb}\label{class_busca_aa04fd71e97f268b784256fa71daaaccb}} 
+\index{Busca@{Busca}!printBusca@{printBusca}}
+\index{printBusca@{printBusca}!Busca@{Busca}}
+\subsubsection{\texorpdfstring{printBusca()}{printBusca()}}
+{\footnotesize\ttfamily void Busca\+::print\+Busca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em Método} & buscar\+Livro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna na tela do usuário os resultados da busca realizada. 
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/busca/\mbox{\hyperlink{_busca_8hpp}{Busca.\+hpp}}\item 
+src/busca/\mbox{\hyperlink{_busca_8cpp}{Busca.\+cpp}}\end{DoxyCompactItemize}

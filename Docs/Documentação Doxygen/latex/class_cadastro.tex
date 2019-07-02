@@ -1,0 +1,125 @@
+\hypertarget{class_cadastro}{}\section{Referência da Classe Cadastro}
+\label{class_cadastro}\index{Cadastro@{Cadastro}}
+
+
+Classe \mbox{\hyperlink{class_cadastro}{Cadastro}}, tem a função de imprimir comandos em tela para o usuário e coletar as informações basicas para cadastramento do usuário.  
+
+
+
+
+{\ttfamily \#include $<$Cadastro.\+hpp$>$}
+
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_cadastro_ae916b7e08d054728d38ea850d6912031}{set\+Nome}} ()
+\item 
+bool \mbox{\hyperlink{class_cadastro_a756e3c3377e7a2aa7b539ed230dce36c}{set\+Cpf}} ()
+\item 
+bool \mbox{\hyperlink{class_cadastro_a3f36331c5294ce2fc5e86e071fea9fc5}{set\+Endereco}} ()
+\item 
+bool \mbox{\hyperlink{class_cadastro_ad177bb36ac413de510c780fbeafc4001}{set\+Contato}} ()
+\item 
+bool \mbox{\hyperlink{class_cadastro_a7388c0d4275b2398c8245293af947f8a}{cadastrar\+Pessoa}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe \mbox{\hyperlink{class_cadastro}{Cadastro}}, tem a função de imprimir comandos em tela para o usuário e coletar as informações basicas para cadastramento do usuário. 
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{class_cadastro_a7388c0d4275b2398c8245293af947f8a}\label{class_cadastro_a7388c0d4275b2398c8245293af947f8a}} 
+\index{Cadastro@{Cadastro}!cadastrarPessoa@{cadastrarPessoa}}
+\index{cadastrarPessoa@{cadastrarPessoa}!Cadastro@{Cadastro}}
+\subsubsection{\texorpdfstring{cadastrarPessoa()}{cadastrarPessoa()}}
+{\footnotesize\ttfamily bool Cadastro\+::cadastrar\+Pessoa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome.} & \\
+\hline
+{\em cpf.} & \\
+\hline
+{\em endereço} & \\
+\hline
+{\em contato} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso o cadastro tenha sido bem sucedido, caso contrário, retornará false. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com o cadastramento do usuario\char`\"{}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_cadastro_ad177bb36ac413de510c780fbeafc4001}\label{class_cadastro_ad177bb36ac413de510c780fbeafc4001}} 
+\index{Cadastro@{Cadastro}!setContato@{setContato}}
+\index{setContato@{setContato}!Cadastro@{Cadastro}}
+\subsubsection{\texorpdfstring{setContato()}{setContato()}}
+{\footnotesize\ttfamily bool Cadastro\+::set\+Contato (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em recebe} & o contato inserido pelo usuário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com o contato do usuario\char`\"{}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_cadastro_a756e3c3377e7a2aa7b539ed230dce36c}\label{class_cadastro_a756e3c3377e7a2aa7b539ed230dce36c}} 
+\index{Cadastro@{Cadastro}!setCpf@{setCpf}}
+\index{setCpf@{setCpf}!Cadastro@{Cadastro}}
+\subsubsection{\texorpdfstring{setCpf()}{setCpf()}}
+{\footnotesize\ttfamily bool Cadastro\+::set\+Cpf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em recebe} & o cpf inserido pelo usuário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com o C\+P\+F inserido\char`\"{}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_cadastro_a3f36331c5294ce2fc5e86e071fea9fc5}\label{class_cadastro_a3f36331c5294ce2fc5e86e071fea9fc5}} 
+\index{Cadastro@{Cadastro}!setEndereco@{setEndereco}}
+\index{setEndereco@{setEndereco}!Cadastro@{Cadastro}}
+\subsubsection{\texorpdfstring{setEndereco()}{setEndereco()}}
+{\footnotesize\ttfamily bool Cadastro\+::set\+Endereco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em recebe} & o endereço inserido pelo usuário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com o endereco do usuario\char`\"{}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_cadastro_ae916b7e08d054728d38ea850d6912031}\label{class_cadastro_ae916b7e08d054728d38ea850d6912031}} 
+\index{Cadastro@{Cadastro}!setNome@{setNome}}
+\index{setNome@{setNome}!Cadastro@{Cadastro}}
+\subsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily bool Cadastro\+::set\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em recebe} & o nome inserido pelo usuário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & \char`\"{}\+Houve um problema com o nome inserido\char`\"{}. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/cadastro/\mbox{\hyperlink{_cadastro_8hpp}{Cadastro.\+hpp}}\item 
+src/cadastro/\mbox{\hyperlink{_cadastro_8cpp}{Cadastro.\+cpp}}\end{DoxyCompactItemize}
