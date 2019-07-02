@@ -1,0 +1,11 @@
+Caso tenha-se interesse em compilar e ligar através do terminal, segue o seguinte comando que deve ser 
+usado na pasta /src:
+
+g++ ../include/gestao/Pessoa.hpp gestao/Pessoa.cpp ../include/gestao/Usuario.hpp 
+gestao/Usuario.cpp 
+../include/login/Login.hpp login/Login.cpp ../include/cadastro/Cadastro.hpp cadastro/Cadastro.cpp 
+../include/cadastro/Senha.hpp cadastro/Senha.cpp ../include/busca/Busca.hpp busca/Busca.cpp 
+../include/menu/Menu.hpp menu/Menu.cpp ../include/excecoes/ExcecaoArquivos.hpp 
+excecoes/ExcecaoArquivos.cpp ../include/excecoes/ExcecaoLogin.hpp excecoes/ExcecaoLogin.cpp 
+../include/excecoes/ExcecaoManipulacaoLivros.hpp excecoes/ExcecaoManipulacaoLivros.cpp 
+../include/excecoes/ExcecaoBusca.hpp excecoes/ExcecaoBusca.cpp main.cpp -o x.main
