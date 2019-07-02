@@ -1,0 +1,54 @@
+        -:    0:Source:menu/Menu.cpp
+        -:    0:Programs:7
+        -:    1:#include "../../include/menu/Menu.hpp"
+        -:    2:
+        1:    3:bool Menu::cabecalho()
+        -:    4:{
+        1:    5:    std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+        1:    6:    std::cout << "---------------------------------------------------------------------------" <<std::endl;
+        1:    7:    std::cout << "PROGRAMACAO E DESENVOLVIMENTO DE SOFTWARE II - SISTEMA PARA BIBLIOTECA" << std::endl;
+        1:    8:    std::cout << "---------------------------------------------------------------------------" <<std::endl;
+        1:    9:    return true;
+        -:   10:}
+        -:   11:
+        1:   12:bool Menu::textoLogin()
+        -:   13:{
+        1:   14:    std::cout << "Opcoes: Digite um valor." << std::endl;
+        1:   15:    std::cout << "  Login: L" << std::endl;
+        1:   16:    std::cout << "  Cadastramento: C" << std::endl;
+        1:   17:    std::cout << "  Sair do sistema: S" << std::endl;
+        1:   18:    return true;
+        -:   19:}
+        -:   20:
+        1:   21:bool Menu::textoMenu()
+        -:   22:{
+        1:   23:    std::cout << "BIBLIOTECA" << std::endl;
+        1:   24:    std::cout << "Opcoes: Digite um valor." << std::endl;
+        1:   25:    std::cout << "  Buscar livro e emprestimo: B" << std::endl;
+        1:   26:    std::cout << "  Verificar livros emprestados e devolucoes: V" << std::endl;
+        1:   27:    std::cout << "  Sair: S" << std::endl;
+        1:   28:    return true;
+        -:   29:}
+        -:   30:
+        1:   31:bool Menu::textoBusca()
+        -:   32:{
+        1:   33:    std::cout << "BUSCAR LIVRO!" << std::endl;
+        1:   34:    std::cout << "ATENCAO!!! \nNAO UTILIZE CARACTERES ESPECIAIS OU LETRAS MAIUSCULAS! FACA REFERENCIA APENAS AO TITULO DO LIVRO!" << std::endl;
+        1:   35:    std::cout << "Digite sua busca: ";
+        1:   36:    return true;
+        -:   37:}
+        -:   38:
+        1:   39:bool Menu::textoTeclaErrada()
+        -:   40:{
+        1:   41:    std::cout << "POR FAVOR, DIGITE ALGUM VALOR VALIDO" << std::endl;
+        1:   42:    return true;
+        -:   43:}
+        -:   44:
+        1:   45:bool Menu::systemPause()
+        -:   46:{
+        1:   47:    std::string aux;
+        1:   48:    std::cout<<"\nPressione enter para continuar";
+        1:   49:    std::cin.ignore();
+        1:   50:    std::cin.get();
+        2:   51:    return true;
+        -:   52:}

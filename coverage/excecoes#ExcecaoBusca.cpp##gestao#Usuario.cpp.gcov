@@ -1,0 +1,186 @@
+        -:    0:Source:gestao/Usuario.cpp
+        -:    0:Programs:7
+        -:    1:#include "../../include/gestao/Usuario.hpp"
+        -:    2:
+        8:    3:Usuario::Usuario(std::string cpf):Pessoa(cpf) {}
+        -:    4:
+        6:    5:bool Usuario::verificarSeHaLivrosEmprestado()
+        -:    6:{
+       12:    7:    std::string cpf = this->getCpf();
+       12:    8:    std::ifstream arquivo;
+       12:    9:    std::string nome_arquivo;
+       12:   10:    std::string linha_arquivo;
+        -:   11:
+        6:   12:    nome_arquivo = "../dados/pessoas/"+cpf+".txt";
+        6:   13:    arquivo.open(nome_arquivo, std::ifstream::in);
+        -:   14:
+        6:   15:    if(!arquivo.is_open())
+        -:   16:    {
+        1:   17:        throw ExcecaoAberturaDeArquivo(); //Verificando se houve ṕoblemas na abertura do arquivo
+        -:   18:    }
+        -:   19:
+        -:   20:    //Lendo arquivo
+       19:   21:    while(std::getline(arquivo, linha_arquivo))
+        -:   22:    {
+       18:   23:        if(linha_arquivo.find("[LIVROS]") != std::string::npos)
+        -:   24:        {
+        4:   25:            std::getline(arquivo, linha_arquivo);
+        4:   26:            if(linha_arquivo=="[/LIVROS]")
+        -:   27:            {
+        2:   28:                return false; 	//Nao ha livros emprestados com esse usuario
+        -:   29:            }
+        -:   30:            else
+        -:   31:            {
+        2:   32:                return true; 	//Ha livros emprestado com esse usuario
+        -:   33:            }
+        -:   34:        }
+        -:   35:    }
+        1:   36:    throw ExcecaoEntradaDeArquivo();	//Caso nao encontre as chaves acima ha um problema com o arquivo
+        -:   37:}
+        -:   38:
+        -:   39:
+        4:   40:bool Usuario::verificarLivroEspecifico(std::string nome_livro)
+        -:   41:{
+        8:   42:    std::string cpf = this->getCpf();
+        8:   43:    std::ifstream arquivo;
+        8:   44:    std::string nome_arquivo;
+        8:   45:    std::string linha_arquivo;
+        -:   46:
+        4:   47:    nome_arquivo = "../dados/pessoas/"+cpf+".txt";
+        4:   48:    arquivo.open(nome_arquivo, std::ifstream::in);
+        -:   49:
+        -:   50:    //Lendo arquivo
+       22:   51:    while(std::getline(arquivo, linha_arquivo))
+        -:   52:    {
+       21:   53:        if(linha_arquivo == nome_livro)
+        -:   54:        {
+        3:   55:            return true;
+        -:   56:        }
+        -:   57:    }
+        1:   58:    arquivo.close();
+        1:   59:    return false;
+        -:   60:}
+        -:   61:
+        3:   62:bool Usuario::pegarLivroEmprestado(std::string nome_livro)
+        -:   63:{
+        6:   64:    std::string livros_key = "[/LIVROS]";
+        6:   65:    std::string nome_arquivo;
+        6:   66:    std::ifstream arquivo_inicial;
+        6:   67:    std::ofstream arquivo_final;
+        6:   68:    std::string linha;
+        -:   69:
+        4:   70:    std::string cpf = this->getCpf();
+        3:   71:    nome_arquivo = "../dados/pessoas/"+cpf+".txt";
+        -:   72:
+        3:   73:    arquivo_inicial.open(nome_arquivo);
+        3:   74:    arquivo_final.open("../dados/pessoas/temp.txt");
+        -:   75:
+       17:   76:    while (getline(arquivo_inicial,linha))
+        -:   77:    {
+        -:   78:        //Caso ja tenha esse livro emprestado
+       15:   79:        if(linha == nome_livro)
+        -:   80:        {
+        1:   81:            arquivo_final.close();
+        1:   82:            arquivo_inicial.close();
+        1:   83:            remove("../dados/pessoas/temp.txt");
+        1:   84:            throw ExcecaoMesmoLivro();
+        -:   85:            //Adicionando livro ao banco
+        -:   86:        }
+       14:   87:        else if(linha == livros_key)
+        -:   88:        {
+        2:   89:            arquivo_final<<nome_livro<<std::endl;
+        2:   90:            arquivo_final<<livros_key<<std::endl;
+        -:   91:            //Transcrevendo arquivo
+        -:   92:        }
+        -:   93:        else
+        -:   94:        {
+       12:   95:            arquivo_final<< linha<< std::endl;
+        -:   96:        }
+        -:   97:    }
+        2:   98:    arquivo_final.close();
+        2:   99:    arquivo_inicial.close();
+        2:  100:    remove(nome_arquivo.c_str());
+        2:  101:    rename("../dados/pessoas/temp.txt", nome_arquivo.c_str());
+        4:  102:    return true;
+        -:  103:}
+        -:  104:
+        -:  105:
+        -:  106:
+        3:  107:bool Usuario::devolverLivro(std::string nome_livro)
+        -:  108:{
+        3:  109:    if(! this->verificarLivroEspecifico(nome_livro))
+        -:  110:    {
+        1:  111:        throw ExcecaoProblemaDevolucao();
+        -:  112:    }
+        4:  113:    std::ifstream arquivo_inicial;
+        4:  114:    std::ofstream arquivo_final;
+        4:  115:    std::string linha;
+        4:  116:    std::string nome_arquivo;
+        -:  117:
+        -:  118:
+        2:  119:    std::string cpf = this->getCpf();
+        2:  120:    nome_arquivo = "../dados/pessoas/"+cpf+".txt";
+        -:  121:
+        2:  122:    arquivo_inicial.open(nome_arquivo);
+        2:  123:    arquivo_final.open("../dados/pessoas/temp.txt");
+        -:  124:
+       14:  125:    while (getline(arquivo_inicial,linha))
+        -:  126:    {
+       12:  127:        if(linha != nome_livro)
+        -:  128:        {
+       10:  129:            arquivo_final<< linha<< std::endl;
+        -:  130:        }
+        -:  131:
+        -:  132:    }
+        2:  133:    arquivo_final.close();
+        2:  134:    arquivo_inicial.close();
+        2:  135:    remove(nome_arquivo.c_str());
+        2:  136:    rename("../dados/pessoas/temp.txt", nome_arquivo.c_str());
+        4:  137:    return true;
+        -:  138:}
+        -:  139:
+        2:  140:bool Usuario::printLivrosEmprestados()
+        -:  141:{
+        2:  142:    if(! this->verificarSeHaLivrosEmprestado())
+        -:  143:    {
+        1:  144:        return false;
+        -:  145:    }
+        2:  146:    std::string cpf = this->getCpf();
+        2:  147:    std::ifstream arquivo;
+        2:  148:    std::string nome_arquivo;
+        2:  149:    std::string linha_arquivo;
+        2:  150:    std::vector<std::string> livros;
+        -:  151:
+        1:  152:    nome_arquivo = "../dados/pessoas/"+cpf+".txt";
+        1:  153:    arquivo.open(nome_arquivo, std::ifstream::in);
+        -:  154:
+        1:  155:    std::cout << "LIVROS EMPRESTADOS:" << std::endl;
+        1:  156:    int aux = 0;
+        -:  157:    //Lendo arquivo
+        6:  158:    while(std::getline(arquivo, linha_arquivo))
+        -:  159:    {
+        6:  160:        if(linha_arquivo == "[/LIVROS]")
+        -:  161:        {
+        1:  162:            this->_livros = livros;
+        1:  163:            arquivo.close();
+        1:  164:            return true;
+        -:  165:        }
+        5:  166:        else if(aux!=0)
+        -:  167:        {
+        1:  168:            std::cout<<aux<<" - "<<linha_arquivo<<std::endl;
+        1:  169:            livros.push_back(linha_arquivo);
+        1:  170:            aux++;
+        -:  171:        }
+        4:  172:        else if(linha_arquivo == "[LIVROS]")
+        -:  173:        {
+        1:  174:            aux++;
+        -:  175:        }
+        -:  176:    }
+    #####:  177:    arquivo.close();
+    #####:  178:    return false;//throw exception;
+        -:  179:}
+        -:  180:
+        1:  181:std::vector<std::string> Usuario::getLivros()
+        -:  182:{
+        1:  183:    return this->_livros;
+        -:  184:}

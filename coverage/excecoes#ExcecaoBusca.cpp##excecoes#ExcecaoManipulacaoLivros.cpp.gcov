@@ -1,0 +1,13 @@
+        -:    0:Source:excecoes/ExcecaoManipulacaoLivros.cpp
+        -:    0:Programs:7
+        -:    1:#include "../../include/excecoes/ExcecaoManipulacaoLivros.hpp"
+        -:    2:
+        1:    3:const char* ExcecaoMesmoLivro::what() const throw()
+        -:    4:{
+        1:    5:    return "O usuario ja esta com esse livro emprestado";
+        -:    6:}
+        -:    7:
+        1:    8:const char* ExcecaoProblemaDevolucao::what() const throw()
+        -:    9:{
+        1:   10:    return "Houve um problema com a devolucao do Livro";
+        -:   11:}

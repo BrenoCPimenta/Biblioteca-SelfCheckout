@@ -1,0 +1,75 @@
+        -:    0:Source:gestao/Pessoa.cpp
+        -:    0:Programs:7
+        -:    1:#include "../../include/gestao/Pessoa.hpp"
+        -:    2:
+        8:    3:Pessoa::Pessoa(std::string cpf):_cpf(cpf) {}
+        -:    4:
+        3:    5:bool Pessoa::buscarDados()
+        -:    6:{
+        6:    7:    std::ifstream arquivo;
+        6:    8:    std::string nome_arquivo;
+        6:    9:    std::string linha_arquivo;
+        5:   10:    std::vector<std::string> linhas_arquivo;
+        -:   11:
+        -:   12:
+        -:   13:    //Abrindo arquivo
+        3:   14:    nome_arquivo = "../dados/pessoas/" + this->_cpf + ".txt";
+        3:   15:    arquivo.open(nome_arquivo, std::ifstream::in);
+        -:   16:
+        3:   17:    if(!arquivo.is_open())
+        -:   18:    {
+        1:   19:        throw ExcecaoAberturaDeArquivo(); //Verificando se houve ṕoblemas na abertura do arquivo
+        -:   20:    }
+        -:   21:
+        -:   22:    //Lendo arquivo
+        6:   23:    for(int i=0; i<4; i++)
+        -:   24:    {
+        5:   25:        getline(arquivo, linha_arquivo);
+        -:   26:
+        5:   27:        if(linha_arquivo == "")
+        -:   28:        {
+        1:   29:            throw ExcecaoEntradaDeArquivo(); //Verificando dados lidos do arquivo
+        -:   30:        }
+        4:   31:        linhas_arquivo.push_back(linha_arquivo);
+        -:   32:    }
+        1:   33:    this->_nome = linhas_arquivo[0];
+        1:   34:    this->_endereco = linhas_arquivo[1];
+        1:   35:    this->_contato = linhas_arquivo[2];
+        -:   36:
+        -:   37:    //Fechando arquivo e verificando se houve erros
+        1:   38:    arquivo.close();
+        1:   39:    if(arquivo.is_open())
+        -:   40:    {
+    #####:   41:        throw ExcecaoFechamentoDeArquivo();
+        -:   42:    }
+        2:   43:    return true;
+        -:   44:}
+       8*:   45:Pessoa::~Pessoa() {}
+------------------
+_ZN6PessoaD0Ev:
+    #####:   45:Pessoa::~Pessoa() {}
+------------------
+_ZN6PessoaD2Ev:
+        8:   45:Pessoa::~Pessoa() {}
+------------------
+        -:   46:
+        -:   47:
+        1:   48:std::string Pessoa::getNome()
+        -:   49:{
+        1:   50:    return this->_nome;
+        -:   51:}
+        -:   52:
+       17:   53:std::string Pessoa::getCpf()
+        -:   54:{
+       17:   55:    return this->_cpf;
+        -:   56:}
+        -:   57:
+        1:   58:std::string Pessoa::getEndereco()
+        -:   59:{
+        1:   60:    return this->_endereco;
+        -:   61:}
+        -:   62:
+        1:   63:std::string Pessoa::getContato()
+        -:   64:{
+        1:   65:    return this->_contato;
+        -:   66:}

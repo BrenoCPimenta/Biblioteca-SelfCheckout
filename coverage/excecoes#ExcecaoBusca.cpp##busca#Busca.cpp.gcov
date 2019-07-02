@@ -1,0 +1,78 @@
+        -:    0:Source:busca/Busca.cpp
+        -:    0:Programs:7
+        -:    1:#include "../../include/busca/Busca.hpp"
+        -:    2:
+        -:    3:
+        2:    4:bool Busca::incluirLivros()
+        -:    5:{
+        4:    6:    std::fstream arquivo;
+        2:    7:    arquivo.open("../dados/livros/livros.txt");
+        2:    8:    if(!arquivo)
+        -:    9:    {
+    #####:   10:        throw ExcecaoAberturaDeArquivoLivros(); //Verificando se houve problemas na abertura do arquivo
+        -:   11:        return 0;
+        -:   12:    }
+        -:   13:
+       10:   14:    while(!arquivo.eof())
+        -:   15:    {
+        8:   16:        std::string temp;
+        8:   17:        getline(arquivo, temp);
+        8:   18:        if(temp == "")
+        -:   19:        {
+    #####:   20:            throw ExcecaoLeituraDeArquivoLivros(); //Verificando dados lidos do arquivo
+        -:   21:            return 0;
+        -:   22:        }
+        8:   23:        livros.push_back(temp);
+        -:   24:    }
+        -:   25:
+        2:   26:    arquivo.close();
+        2:   27:    if(arquivo.is_open())
+        -:   28:    {
+    #####:   29:        throw ExcecaoFechamentoDeArquivoLivros();	//Verificando se houve problemas no fechamento do arquivo
+        -:   30:        return 0;
+        -:   31:    }
+        2:   32:    return 1;
+        -:   33:}
+        -:   34:
+        2:   35:void Busca::buscarLivro(std::string palavra_chave)
+        -:   36:{
+        2:   37:    if( livros.size() == 0 )
+        -:   38:    {
+        1:   39:        throw ExcecaoLivrosNaoListados(); //Verificando problemas na inclusao dos livros ou arquivo de livros vazio
+        -:   40:    }
+        -:   41:
+        1:   42:    std::vector<std::string>::iterator it;
+        -:   43:
+        9:   44:    for( it = livros.begin() ; it != livros.end() ; it++ )
+        -:   45:    {
+        8:   46:        std::size_t encontrado = it->find(palavra_chave);
+        8:   47:        if( encontrado != std::string::npos )
+        -:   48:        {
+        2:   49:            livros_busca.push_back(*it);
+        -:   50:        }
+        -:   51:    }
+        1:   52:}
+        -:   53:
+    #####:   54:void Busca::printBusca()
+        -:   55:{
+    #####:   56:    std::vector<std::string>::iterator it;
+        -:   57:
+    #####:   58:    std::cout << "RESULTADOS DA BUSCA:" << std::endl;
+        -:   59:
+    #####:   60:    if( livros_busca.size() == 0 )
+        -:   61:    {
+    #####:   62:        std::cout << "Nenhum livro encontrado a partir da busca." << std::endl;
+        -:   63:    }
+        -:   64:    else
+        -:   65:    {
+    #####:   66:        for( it = livros_busca.begin() ; it != livros_busca.end() ; it++ )
+        -:   67:        {
+    #####:   68:            std::cout << "\t" << (1 + it - livros_busca.begin()) << " - " << *it << std::endl;
+        -:   69:        }
+        -:   70:    }
+    #####:   71:}
+        -:   72:
+        1:   73:std::vector<std::string> Busca::getLivrosBusca()
+        -:   74:{
+        1:   75:    return this->livros_busca;
+        -:   76:}
